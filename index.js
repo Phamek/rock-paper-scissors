@@ -39,31 +39,30 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-
-
-/*
-const computerMove = getComputerChoice();
-
 
 function Game() {
-    for (let i = 0; i < 5; i++) {
-        const playerMove = prompt("Enter a rock, paper or scissor.");
-        const computerMove = getComputerChoice();
-        console.log(playRound(playerMove, computerMove));
-        
-        const score = 0;
-        const result = playRound();
-        if (result === "You won! Paper beats Rock" || result === "You won! Rock beats Scissor" || result === "You won! Scissor beats Paper") {
-            score++;
-            console.log(score);
-        }
-        
 
+        let playerScore = 0;
+        let computerScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+        let playerMove = prompt("Enter a rock, paper or scissor.");
+        let computerMove = getComputerChoice();
+        const result = playRound(playerMove, computerMove);
+        if (result === "You won! Paper beats Rock" || result === "You won! Rock beats Scissor" || result === "You won! Scissor beats Paper") {
+            playerScore++;
+        } else if (result === "You lose! Scissor beats Paper" || result === "You lose! Paper beats Rock" || result === "You lose! Rock beats Scissor") {
+            computerScore++;
+        }
+        console.log(`Player Score: ${playerScore}  : Computer Score: ${computerScore}`);
+    }
+    if (playerScore > computerScore) {
+        console.log("You Won");
+    } else if (playerScore === computerScore){
+        console.log("Draw");
+    } else {
+        console.log("YOu Lost");
     }
 }
 
 Game();
-*/
