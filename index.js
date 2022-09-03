@@ -28,7 +28,7 @@ function playRound(playerSelection, computerSelection) {
         case playerSelection.toLowerCase() === "scissor" && computerSelection === "Rock":
             return "You lose! Rock beats Scissor";
             break;
-        case playerSelection.toLowerCase() === "scissor" && computerSelection === "Rock":
+        case playerSelection.toLowerCase() === "scissor" && computerSelection === "Paper":
             return "You won! Scissor beats Paper";
             break;       
     }
