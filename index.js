@@ -9,36 +9,35 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-        switch (true) {
-
-            case playerSelection.toLowerCase() === computerSelection.toLowerCase():
-                return "Draw";
-                break;       
-            case playerSelection.toLowerCase() === "paper" && computerSelection === "Rock":
-                return "You won! Paper beats Rock";
-                break;
-            case playerSelection.toLowerCase() === "paper" && computerSelection === "Scissor":
-                return "You lose! Scissor beats Paper";
-                break;         
-            case playerSelection.toLowerCase() === "rock" && computerSelection === "Paper":
-                return "You lose! Paper beats Rock";
-                break;
-            case playerSelection.toLowerCase() === "rock" && computerSelection === "Scissor":
-                return "You won! Rock beats Scissor";
-                break;
-            case playerSelection.toLowerCase() === "scissor" && computerSelection === "Rock":
-                return "You lose! Rock beats Scissor";
-                break;
-            case playerSelection.toLowerCase() === "scissor" && computerSelection === "Rock":
-                return "You won! Scissor beats Paper";
-                break;       
-        }
+    switch (true) {
+        case playerSelection.toLowerCase() === computerSelection.toLowerCase():
+            return "Draw";
+            break;       
+        case playerSelection.toLowerCase() === "paper" && computerSelection === "Rock":
+            return "You won! Paper beats Rock";
+            break;
+        case playerSelection.toLowerCase() === "paper" && computerSelection === "Scissor":
+            return "You lose! Scissor beats Paper";
+            break;         
+        case playerSelection.toLowerCase() === "rock" && computerSelection === "Paper":
+            return "You lose! Paper beats Rock";
+            break;
+        case playerSelection.toLowerCase() === "rock" && computerSelection === "Scissor":
+            return "You won! Rock beats Scissor";
+            break;
+        case playerSelection.toLowerCase() === "scissor" && computerSelection === "Rock":
+            return "You lose! Rock beats Scissor";
+            break;
+        case playerSelection.toLowerCase() === "scissor" && computerSelection === "Rock":
+            return "You won! Scissor beats Paper";
+            break;       
     }
+}
 
 function Game() {
 
-        let playerScore = 0;
-        let computerScore = 0;
+    let playerScore = 0;
+    let computerScore = 0;
 
     for (let i = 0; i < 5; i++) {
         let playerMove = prompt("Enter a rock, paper or scissor.");
