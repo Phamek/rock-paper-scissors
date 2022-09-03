@@ -7,11 +7,7 @@ function getComputerChoice() {
         return "Scissor";
     }
 }
-/*
-console.log(getComputerChoice());
-*/
 
-// Single round of Rock Paper Scissors
 function playRound(playerSelection, computerSelection) {
         switch (true) {
 
@@ -39,7 +35,6 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
-
 function Game() {
 
         let playerScore = 0;
@@ -48,10 +43,10 @@ function Game() {
     for (let i = 0; i < 5; i++) {
         let playerMove = prompt("Enter a rock, paper or scissor.");
         let computerMove = getComputerChoice();
-        const result = playRound(playerMove, computerMove);
-        if (result === "You won! Paper beats Rock" || result === "You won! Rock beats Scissor" || result === "You won! Scissor beats Paper") {
+        const RESULT = playRound(playerMove, computerMove);
+        if (RESULT === "You won! Paper beats Rock" || RESULT === "You won! Rock beats Scissor" || RESULT === "You won! Scissor beats Paper") {
             playerScore++;
-        } else if (result === "You lose! Scissor beats Paper" || result === "You lose! Paper beats Rock" || result === "You lose! Rock beats Scissor") {
+        } else if (RESULT === "You lose! Scissor beats Paper" || RESULT === "You lose! Paper beats Rock" || RESULT === "You lose! Rock beats Scissor") {
             computerScore++;
         }
         console.log(`Player Score: ${playerScore}  : Computer Score: ${computerScore}`);
